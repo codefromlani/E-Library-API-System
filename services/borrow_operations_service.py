@@ -34,11 +34,11 @@ def borrow_book(book_id: int, user_id: int):
         )
         
     borrow_record = {
-        "id": len(data.borrow_records_db) + 1,  # Ensure id is included
+        "id": len(data.borrow_records_db) + 1,  
         "user_id": user_id,
         "book_id": book_id,
         "borrow_date": date.today(),
-        "return_date": None,  # Initially, no return date
+        "return_date": None,  
     }
 
     data.borrow_records_db.append(borrow_record)
