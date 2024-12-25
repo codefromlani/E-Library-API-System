@@ -22,22 +22,7 @@ def reset_db():
     return data
 
 
-# def test_create_book_success(reset_db):  # Accept reset_db fixture as a parameter
-#     # Arrange: Define a book to create
-#     book_data = {
-#         "title": "1984",
-#         "author": "George Orwell"
-#     }
 
-#     # Act: Send POST request to create the book
-#     response = client.post("/books/", json=book_data)
-
-#     # Assert: Check if the response is successful (status code 201)
-#     assert response.status_code == 201  # Expect 201 Created
-#     assert response.json()["title"] == book_data["title"]
-#     assert response.json()["author"] == book_data["author"]
-#     assert response.json()["is_available"] == True
-#     assert "id" in response.json()  # Ensure the response includes an ID
 
 def test_create_book_duplicate_title():
     # Arrange: Create the first book
